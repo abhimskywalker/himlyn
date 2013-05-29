@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    
+    {% load staticfiles %}
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Resumator</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
+        <style>
+            body {
+                padding-top: 60px;
+                padding-bottom: 40px;
+            }
+        </style>
+        <style type="text/css">
+              .center {
+              	margin: 0 auto;
+              	float: none;
+              }
+              .form-signin {
+                max-width: 400px;
+                padding: 19px 29px 29px;
+                margin: 0 auto 20px;
+                background-color: #fff;
+                border: 1px solid #e5e5e5;
+                -webkit-border-radius: 5px;
+                   -moz-border-radius: 5px;
+                        border-radius: 5px;
+                -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+                   -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+                        box-shadow: 0 1px 2px rgba(0,0,0,.05);
+              }
+              .form-signin .form-signin-heading,
+              .form-signin .checkbox {
+                margin-bottom: 10px;
+              }
+              .form-signin input[type="text"],
+              .form-signin input[type="password"] {
+                font-size: 16px;
+                height: auto;
+                margin-bottom: 15px;
+                padding: 7px 9px;
+              }
+        
+            </style>
+        <link rel="stylesheet" href="{% static "css/bootstrap-responsive.min.css" %}">
+        <link rel="stylesheet" href="{% static "css/main.css" %}">
+
+        <script src="{% static "js/vendor/modernizr-2.6.2-respond-1.1.0.min.js" %}"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="#">Resumator</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <!--<li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li class="nav-header">Nav header</li>
+                                    <li><a href="#">Separated link</a></li>
+                                    <li><a href="#">One more separated link</a></li>
+                                </ul>
+                            </li>-->
+                        </ul>
+                        <!--<form class="navbar-form pull-right">
+                            <input class="span2" type="text" placeholder="Email">
+                            <input class="span2" type="password" placeholder="Password">
+                            <button type="submit" class="btn">Sign in</button>
+                        </form>-->
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <!-- Main hero unit for a primary marketing message or call to action -->
+            <div class="row">
+                <!--<h1>Get Started!</h1>-->
+                <!--<p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+                <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>-->
+                <form class="form-signin">
+                  <h2 class="form-signin-heading">Get Started!</h2>
+                  <input type="text" class="input-block-level" placeholder="Email address">
+                  <input type="password" class="input-block-level" placeholder="Password">
+                  <label class="checkbox">
+                    <input type="checkbox" value="remember-me"> Remember me
+                  </label>
+                  <button class="btn btn-large btn-primary" type="submit">Sign in</button>
+                  <button class="btn btn-large btn-primary pull-right" type="submit">Register</button>
+                </form>
+            </div>
+
+            <!-- Example row of columns -->
+            <div class="row">
+                <!--<div class="span3"></div>-->
+                <div class="span6 center">
+                    <div id="myCarousel" class="carousel slide">
+                      <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                        <li data-target="#myCarousel" data-slide-to="3"></li>
+                      </ol>
+                      <!-- Carousel items -->
+                      <div class="carousel-inner">
+                        <div class="active item">
+                          <img src="{% static "img/resume_sample_1.jpg" %}"/>
+                          <div class="carousel-caption">
+                            <h4>Create and Maintain your Resume Online</h4>
+                            <p>Create a master resume once and keep duplicating different versions with different templates seleting only the sections and points you feel relevant for a particular application or job. </p>
+                          </div>
+                        </div>
+                        <div class="item">
+                          <img src="{% static "img/share.jpg" %}"/>
+                          <div class="carousel-caption">
+                            <h4>Share and Get Feedback</h4>
+                            <p>Share your resume link with friends and get all the feedback from everyone in a very ititive manner and all at one place. </p>
+                          </div>
+                        </div>
+                        <div class="item">
+                          <img src="{% static "img/drag_drop_img.jpg" %}"/>
+                          <div class="carousel-caption">
+                            <h4>Juggle Content</h4>
+                            <p>You can have different versions of resume easily transfer points and sections form one to another with simple drag and drop UI. You will love it once you use it. </p>
+                          </div>
+                        </div>
+                        <div class="item">
+                          <img src="{% static "img/linkedin-clean-profile.jpg" %}" />
+                          <div class="carousel-caption">
+                            <h4>Import from LinkedIn</h4>
+                            <p>You can get started by just importing your LinkedIn profile information as base for you master resume. </p>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Carousel nav -->
+                      <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+                      <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+                    </div>
+                </div>
+                <!--<div class="span3">
+                    <h2>Share and Get Feedback</h2>
+                    <p>Share your resume link with friends and get all the feedback from everyone in a very ititive manner and all at one place. </p>
+                    <p><a class="btn" href="#">Get Started &raquo;</a></p>
+                </div>
+                <div class="span3">
+                    <h2>Juggle Content</h2>
+                    <p>You can have different versions of resume easily transfer points and sections form one to another with simple drag and drop UI. You will love it once you use it. </p>
+                    <p><a class="btn" href="#">Get Started &raquo;</a></p>
+                </div>
+                <div class="span3">
+                    <h2>Import from LinkedIn</h2>
+                    <p>You can get started by just importing your LinkedIn profile information as base for you master resume. </p>
+                    <p><a class="btn" href="#">Get Started &raquo;</a></p>
+                </div>-->
+            </div>
+            
+
+            <hr>
+
+            <footer>
+                <p>&copy; Resumator 2013</p>
+            </footer>
+
+        </div> <!-- /container -->
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="{% static "js/vendor/jquery-1.9.1.min.js" %}"><\/script>')</script>
+
+        <script src="{% static "js/vendor/bootstrap.min.js" %}"></script>
+
+        <script src="{% static "js/plugins.js" %}"></script>
+        <script src="{% static "js/main.js" %}"></script>
+
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>
